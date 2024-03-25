@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  - var image_names = ['wc1', 'wc2', 'wc3', 'wc4', 'wc5']
+  h1= title
+  - var image_names = ['w1', 'w2', 'w3', 'w4', 'w5']
   - var height = 200
   - var width = 200
   - var displayedImages = []
@@ -11,7 +12,7 @@ block content
     - if (!displayedImages.includes(randomImage))
       - displayedImages.push(randomImage)
       img(
-        src=`/images/${randomImage}.jpeg`,
+        src=`/images/${randomImage}.jpg`,
         alt=`${randomImage}`,
         height=height,
         width=width
