@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var pickRouter = require('./routes/pick');
-var watercraft = require('./routes/watercraft');
+var knifeRouter = require('./routes/knife');
 var gridrsRouter = require('./routes/grid');
 
 var app = express();
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/pick',pickRouter);
-app.use('/watercraft', watercraft);
+app.use('/knife', knifeRouter);
 app.use('/grid',gridrsRouter);
 
 
